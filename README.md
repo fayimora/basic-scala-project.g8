@@ -6,3 +6,10 @@ comes bundled with:
 * SBT configuration for `0.12.4`, scala `2.10.2`, and `scalatest` dependencies
 * project `name`, `organization` and `version` customizable as variables
 
+## CHANGELOG
+
+### 0.1.0 (Initial release!)
+* scalatest 1.9.1 for testing
+* sbt 0.12.4
+* scala 2.10.2
+
