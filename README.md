@@ -2,7 +2,7 @@ This is a fork of [fayimora/basic-scala-project.g8](https://github.com/fayimora/
 
 * `main` and `test` source directories
 * [Specs2](http://etorreborre.github.io/specs2/)
-* SBT configuration for `0.13.0`, `Scala 2.10.3`, and `ScalaTest 2.0` dependencies
+* SBT configuration for `0.13.0` and `Scala 2.10.3` dependencies
 * project `name`, `organization` and `version` customizable as variables
 
 ## CHANGELOG
