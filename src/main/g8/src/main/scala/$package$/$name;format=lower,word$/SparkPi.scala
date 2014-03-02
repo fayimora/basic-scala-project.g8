@@ -1,4 +1,4 @@
-package $organization$.$name;format="lower,word"$
+package $package$.$name;format="lower,word"$
 
 import org.apache.spark.SparkContext
 import org.apache.spark.SparkContext._
