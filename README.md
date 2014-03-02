@@ -1,4 +1,5 @@
-This is a [giter8](https://github.com/n8han/giter8) template for generating a new scala project. It comes bundled with:
+This is a [Spark](https://spark.incubator.apache.org/) template for generating a new Spark application project.
+It comes bundled with:
 
 * `main` and `test` source directories
 * [ScalaTest](http://www.scalatest.org/)
@@ -8,15 +9,10 @@ This is a [giter8](https://github.com/n8han/giter8) template for generating a ne
 
 ## CHANGELOG
 
-### 0.1.2
-* Scala 2.10.3
-
-### 0.1.1
-* Scalatest 1.9.2 for testing
-* Sbt 0.13.0
-
 ### 0.1.0 (Initial release!)
-* Scalatest 1.9.1 for testing
+* Scalatest 2.0 for testing
 * Sbt 0.12.4
-* Scala 2.10.2
-
+* Scala 2.10.3
+* Spark 0.9.0
+* Hadoop 2.2 (CDH5b2)
+* SparkPi
