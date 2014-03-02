@@ -74,7 +74,7 @@ Now, you see spark's console::
 
 You need to import the library and run SparkPi.::
 
- scala> import your.package.SparkPi._
+ scala> import com.example.SparkPi._
  scala> val sp = new SparkPi(sc, 2)
  scala> sp.exec()
  ...
@@ -101,7 +101,7 @@ Then, we suppose that you have JAR as <your source root directory>/target/scala-
 
 Next, you can run SparkPi with spark-class command.::
 
- $ SPARK_CLASSPATH=$SPARK_CLASSPATH:target/scala-2.10/basic-spark_2.10-0.0.1.jar /usr/lib/spark/bin/spark-class your.package.SparkPi local
+ $ SPARK_CLASSPATH=$SPARK_CLASSPATH:target/scala-2.10/basic-spark_2.10-0.0.1.jar /usr/lib/spark/bin/spark-class com.example.SparkPi local
  ...
  ..
  .
@@ -139,7 +139,7 @@ and is readable for spark user.
 
 Next, you can run SparkPi with spark-class command.::
 
- $ /usr/lib/spark/bin/spark-class org.apache.spark.deploy.Client launch spark://spark-01:7077 file:///tmp/basic-spark_2.10-0.0.1.jar your.package.SparkPi spark://spark-01:7077 10
+ $ /usr/lib/spark/bin/spark-class org.apache.spark.deploy.Client launch spark://spark-01:7077 file:///tmp/basic-spark_2.10-0.0.1.jar com.example.SparkPi spark://spark-01:7077 10
  Sending launch command to spark://spark-01:7077
  Driver successfully submitted as driver-20140302163431-0000
  ... waiting before polling master for driver state
