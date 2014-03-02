@@ -62,11 +62,11 @@ and make JAR.::
  $ sbt compile
  $ sbt package
 
-Then, you get JAR as target/scala-2.10/basicspark_2.10-0.0.1.jar.
+Then, you get JAR as target/scala-2.10/basic-spark_2.10-0.0.1.jar.
 
 Second, you can run SparkPi with spark-shell.::
 
- $ MASTER=local ADD_JARS=target/scala-2.10/basicspark_2.10-0.0.1.jar SPARK_CLASSPATH=$SPARK_CLASSPATH:target/scala-2.10/basicspark_2.10-0.0.1.jar spark-shell
+ $ MASTER=local ADD_JARS=target/scala-2.10/basic-spark_2.10-0.0.1.jar SPARK_CLASSPATH=$SPARK_CLASSPATH:target/scala-2.10/basic-spark_2.10-0.0.1.jar spark-shell
 
 Now, you see spark's console::
 
@@ -97,11 +97,11 @@ Procedure
 ---------
 First, you need compile source codes
 and make JAR in the same way of running with spark-shell.
-Then, we suppose that you have JAR as <your source root directory>/target/scala-2.10/basicspark_2.10-0.0.1.jar.
+Then, we suppose that you have JAR as <your source root directory>/target/scala-2.10/basic-spark_2.10-0.0.1.jar.
 
 Next, you can run SparkPi with spark-class command.::
 
- $ SPARK_CLASSPATH=$SPARK_CLASSPATH:target/scala-2.10/basicspark_2.10-0.0.1.jar /usr/lib/spark/bin/spark-class your.package.SparkPi local
+ $ SPARK_CLASSPATH=$SPARK_CLASSPATH:target/scala-2.10/basic-spark_2.10-0.0.1.jar /usr/lib/spark/bin/spark-class your.package.SparkPi local
  ...
  ..
  .
@@ -134,12 +134,12 @@ Requirement
 Procedure
 ---------
 First, you need to copy JAR to every server in the cluster.
-In this tutorial, we assume that basicspark_2.10-0.0.1.jar is located on /tmp/basicspark_2.10-0.0.1.jar in every server,
+In this tutorial, we assume that basic-spark_2.10-0.0.1.jar is located on /tmp/basic-spark_2.10-0.0.1.jar in every server,
 and is readable for spark user.
 
 Next, you can run SparkPi with spark-class command.::
 
- $ /usr/lib/spark/bin/spark-class org.apache.spark.deploy.Client launch spark://spark-01:7077 file:///tmp/basicspark_2.10-0.0.1.jar your.package.SparkPi spark://spark-01:7077 10
+ $ /usr/lib/spark/bin/spark-class org.apache.spark.deploy.Client launch spark://spark-01:7077 file:///tmp/basic-spark_2.10-0.0.1.jar your.package.SparkPi spark://spark-01:7077 10
  Sending launch command to spark://spark-01:7077
  Driver successfully submitted as driver-20140302163431-0000
  ... waiting before polling master for driver state
