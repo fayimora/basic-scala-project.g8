@@ -1,4 +1,4 @@
-package $package$.$name;format="lower,word"$
+package $package$
 
 import org.scalatest.FunSpec
 import org.scalatest.BeforeAndAfter
