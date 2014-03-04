@@ -7,6 +7,24 @@ It comes bundled with:
 * SBT configuration for `0.13.0`, `Scala 2.10.3`, and `ScalaTest 2.0` dependencies
 * project `name`, `package` and `version` customizable as variables
 
+How to use
+==========
+First, you need to install `conscript <https://github.com/n8han/conscript>`_ .::
+
+ $ curl https://raw.github.com/n8han/conscript/master/setup.sh | sh
+
+Conscript command is installed into ~/bin/cs.
+If ~/bin is included in PATH, you can install `giter8 <https://github.com/n8han/giter8>`_ ::
+
+ $ cs n8han/giter8
+
+Next, the following command generates the first set of Spark application.::
+
+ $ g8 nttdata-oss/basic-spark-project
+
+After the short question, you have the project directory (default: basic-spark)
+In the project directory, README.rst is found, which tells us how to execute sample application.
+
 CHANGELOG
 =========
 
