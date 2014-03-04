@@ -5,14 +5,18 @@ It comes bundled with:
 * [ScalaTest](http://www.scalatest.org/)
 * Scalacheck
 * SBT configuration for `0.13.0`, `Scala 2.10.3`, and `ScalaTest 2.0` dependencies
-* project `name`, `organization` and `version` customizable as variables
+* project `name`, `package` and `version` customizable as variables
 
-## CHANGELOG
+CHANGELOG
+=========
 
-### 0.1.0 (Initial release!)
+0.1.0 (Initial release!)
+------------------------
 * Scalatest 2.0 for testing
 * Sbt 0.12.4
 * Scala 2.10.3
 * Spark 0.9.0
 * Hadoop 2.2 (CDH5b2)
 * SparkPi
+
+.. vim: ft=rst tw=0 ts=2 sw=2 et
