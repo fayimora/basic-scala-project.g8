@@ -159,8 +159,8 @@ The launched driver program and application is found on Spark master's web front
 The detail information for driver program is obtained from "Completed Drivers".
 In the woker's frontend, you get the stdout and stderr of the driver program.
 
-How to run RandomTextWriter on the YARN cluster
-===============================================
+How to run RandomTextWriter on the YARN cluster with yarn-client mode
+=====================================================================
 You can run RandomTextWriter, which is used to generate test data, on **YARN cluster** .
 
 Requirement
@@ -185,6 +185,17 @@ Requirement
   
 Procedure
 ---------
+RandomTextWriter generates test-data, which is consists of key-value recode delited by *tab* .
+The key and value is the sequence of some words which is randomly selected from the list of 1000 words.
+
+Example::
+
+ scapuloradial circumzenithal corbel eer hemimelus divinator <<tab>> nativeness reconciliable pneumonalgia Joachimite Dadaism
+
+You can run RandomTextWriter by the following command::
+
+ $ SPARK_CLASSPATH=$CLASSPATH:../test-hoge/target/scala-2.10/test-hoge.jar SPARK_YARN_APP_JAR=../test-hoge/target/scala-2.10/test-hoge.jar ./bin/spark-class com.example.RandomTextWriter yarn-client hdfs://cdh5-pseudo:8020/user/vagrant/sampledata-hoge -b 10 -n 2
+
 
 
 .. vim: ft=rst tw=0
