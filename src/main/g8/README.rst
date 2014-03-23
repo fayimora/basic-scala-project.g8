@@ -15,7 +15,7 @@ Feature
   + SparkPi
   + WordCount
  
-How to run SparkPi in local mode with sbt command
+How to run SparkPi on local mode with sbt command
 =================================================
 
 Requirement
@@ -24,7 +24,7 @@ Requirement
 
 Procedure
 ---------
-You can run SparkPi in local mode::
+You can run SparkPi on local mode::
 
  $ sbt "run local 1"
  ...
@@ -44,7 +44,7 @@ You can run SparkPi in local mode::
  [success] Total time: 7 s, completed 2014/03/02 11:34:50
  14/03/02 11:34:50 INFO RemoteActorRefProvider$RemotingTerminator: Remote daemon shut down; proceeding with flushing remote transports.
 
-How to run SparkPi in spark shell
+How to run SparkPi on spark shell
 =================================
 
 Requirement
@@ -62,11 +62,11 @@ and make JAR.::
  $ sbt compile
  $ sbt package
 
-Then, you get JAR as target/scala-2.10/basic-spark_2.10-0.0.1.jar.
+Then, you get JAR as target/scala-2.10/basic-spark.jar.
 
 Second, you can run SparkPi with spark-shell.::
 
- $ MASTER=local ADD_JARS=target/scala-2.10/basic-spark_2.10-0.0.1.jar SPARK_CLASSPATH=$SPARK_CLASSPATH:target/scala-2.10/basic-spark_2.10-0.0.1.jar spark-shell
+ $ MASTER=local ADD_JARS=target/scala-2.10/basic-spark.jar SPARK_CLASSPATH=$SPARK_CLASSPATH:target/scala-2.10/basic-spark.jar spark-shell
 
 Now, you see spark's console::
 
@@ -82,7 +82,7 @@ You need to import the library and run SparkPi.::
  .
  res0: Double = 3.1376
 
-How to run SparkPi in local mode
+How to run SparkPi on local mode
 ================================
 You can run SparkPi with spark-class command.
 
@@ -97,11 +97,11 @@ Procedure
 ---------
 First, you need compile source codes
 and make JAR in the same way of running with spark-shell.
-Then, we suppose that you have JAR as <your source root directory>/target/scala-2.10/basic-spark_2.10-0.0.1.jar.
+Then, we suppose that you have JAR as <your source root directory>/target/scala-2.10/basic-spark.jar.
 
 Next, you can run SparkPi with spark-class command.::
 
- $ SPARK_CLASSPATH=$SPARK_CLASSPATH:target/scala-2.10/basic-spark_2.10-0.0.1.jar /usr/lib/spark/bin/spark-class com.example.SparkPi local
+ $ SPARK_CLASSPATH=$SPARK_CLASSPATH:target/scala-2.10/basic-spark.jar /usr/lib/spark/bin/spark-class com.example.SparkPi local
  ...
  ..
  .
@@ -118,7 +118,7 @@ Next, you can run SparkPi with spark-class command.::
  14/03/02 11:51:02 INFO SparkContext: Successfully stopped SparkContext
  14/03/02 11:51:02 INFO RemoteActorRefProvider$RemotingTerminator: Remote daemon shut down; proceeding with flushing remote transports.
 
-How to run SparkPi in the Spark standalone cluster
+How to run SparkPi on the Spark standalone cluster
 ==================================================
 You can run SparkPi on the Spark standalone cluster with spark-class command.
 
@@ -134,12 +134,12 @@ Requirement
 Procedure
 ---------
 First, you need to copy JAR to every server in the cluster.
-In this tutorial, we assume that basic-spark_2.10-0.0.1.jar is located on /tmp/basic-spark_2.10-0.0.1.jar in every server,
+In this tutorial, we assume that basic-spark.jar is located on /tmp/basic-spark.jar in every server,
 and is readable for spark user.
 
 Next, you can run SparkPi with spark-class command.::
 
- $ /usr/lib/spark/bin/spark-class org.apache.spark.deploy.Client launch spark://spark-01:7077 file:///tmp/basic-spark_2.10-0.0.1.jar com.example.SparkPi spark://spark-01:7077 10
+ $ /usr/lib/spark/bin/spark-class org.apache.spark.deploy.Client launch spark://spark-01:7077 file:///tmp/basic-spark.jar com.example.SparkPi spark://spark-01:7077 10
  Sending launch command to spark://spark-01:7077
  Driver successfully submitted as driver-20140302163431-0000
  ... waiting before polling master for driver state
@@ -147,10 +147,37 @@ Next, you can run SparkPi with spark-class command.::
  State of driver-20140302163431-0000 is RUNNING
  Driver running on spark-04:7078 (worker-20140228225630-spark-04-7078)
 
-The launched driver program and application is found in Spark master's web frontend.
+The launched driver program and application is found on Spark master's web frontend.
 (ex. http://spark-01:8080)
 The detail information for driver program is obtained from "Completed Drivers".
 In the woker's frontend, you get the stdout and stderr of the driver program.
+
+How to run RandomTextWriter on the YARN cluster
+===============================================
+You can run RandomTextWriter, which is used to generate test data, on **YARN cluster** .
+
+Requirement
+-----------
+* sbt is installed
+* Spark-0.9.0-incubating with compiled against CDH5b2.
+  Here, we assume that you have cloned the Spark repository in ~/Sources/spark-0.9.0-incubating
+  and the compiled JAR path is ~/Sources/spark-0.9.0-incubating/assembly/target/scala-2.10/spark-assembly-0.9.0-incubating-hadoop2.2.0-cdh5.0.0-beta-2.jar.
+  The detail of compilling sources of Spark is available on `Spark public website <http://spark.apache.org/docs/latest/running-on-yarn.html>`_ .
+* The CDH5b2 YARN cluster is available from your client computer.
+* The CDH5b2 HDFS cluster is available from your client computer.
+  We assume that the url of HDFS is hdfs://hdfs-namenode:8020/
+* Hadoop configuration file is located on /etc/hadoop/conf.
+* You have the spark-env.sh in ~/Sources/spark-0.9.0-incubating/conf/spark-env.sh.
+  The following is the content.::
+
+   export SPARK_USER=${USER}
+   export HADOOP_CONF_DIR=/etc/hadoop/conf
+   export SPARK_JAR=./assembly/target/scala-2.10/spark-assembly-0.9.0-incubating-hadoop2.2.0-cdh5.0.0-beta-2.jar
+
+* The application JAR compiled by "sbt assembly" is located on target/scala-2.10/basic-spark.jar
+  
+Procedure
+---------
 
 
 .. vim: ft=rst tw=0
