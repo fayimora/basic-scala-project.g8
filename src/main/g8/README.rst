@@ -1,6 +1,13 @@
 **********************
 Spark sample project
 **********************
+This is a sample project of Spark.
+You can run the most simple example (SparkPi) without Spark cluster,
+and also can run it on Spark standalone cluster.
+
+If you have YARN cluster, the test-data generator (RandomTextWriter) and
+the wordcount application (WordCount) is available.
+These appliation use HDFS for input and output.
 
 .. contents::
 .. sectnum::
