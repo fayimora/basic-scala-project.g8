@@ -194,7 +194,7 @@ Example::
 
 You can run RandomTextWriter by the following command::
 
- $ SPARK_CLASSPATH=$CLASSPATH:../test-hoge/target/scala-2.10/test-hoge.jar SPARK_YARN_APP_JAR=../test-hoge/target/scala-2.10/test-hoge.jar ./bin/spark-class com.example.RandomTextWriter yarn-client hdfs://cdh5-pseudo:8020/user/vagrant/sampledata-hoge -b 10 -n 2
+ $ SPARK_CLASSPATH=$CLASSPATH:../basic-spark/target/scala-2.10/basic-spark.jar SPARK_YARN_APP_JAR=../basic-spark/target/scala-2.10/basic-spark.jar ./bin/spark-class com.example.RandomTextWriter yarn-client hdfs://cdh5-pseudo:8020/user/vagrant/sampledata-hoge -b 10 -n 2
 
 
 
