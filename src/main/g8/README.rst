@@ -21,6 +21,15 @@ Feature
 
   + SparkPi
   + WordCount
+
+Preparation
+===========
+If you have not generated this sample project,
+please execute g8 command according to `g8 template's README <https://github.com/nttdata-oss/basic-spark-project.g8/blob/master/README.rst>`_
+
+Here, we assume that the sample project is generated on ~/Sources/basic-spark,
+and the project name is "Basic Spark", which is the default name.
+
  
 How to run SparkPi on local mode with sbt command
 =================================================
@@ -195,8 +204,12 @@ Example::
 
 You can run RandomTextWriter by the following command::
 
- $ SPARK_CLASSPATH=$CLASSPATH:../basic-spark/target/scala-2.10/basic-spark.jar SPARK_YARN_APP_JAR=../basic-spark/target/scala-2.10/basic-spark.jar ./bin/spark-class com.example.RandomTextWriter yarn-client hdfs://cdh5-pseudo:8020/user/vagrant/sampledata-hoge -b 10 -n 2
+ $ SPARK_CLASSPATH=$CLASSPATH:~/Sources/basic-spark/target/scala-2.10/basic-spark.jar SPARK_YARN_APP_JAR=~/Sources/basic-spark/target/scala-2.10/basic-spark.jar ./bin/spark-class com.example.RandomTextWriter yarn-client hdfs://hdfs-namenode:8020/user/<your user name>/sampledata -b 10 -n 2
 
+The option "-b" specifies the size of data per node [MByte] and the option "-n" specifies the number of node to generate sample data.
+If you have "-b 10" and "-n 2", 20 mega btytes of data is produced.
+
+This command generates the sample data on /user/<your user name>/sampledata on HDFS.
 
 
 .. vim: ft=rst tw=0
