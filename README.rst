@@ -25,6 +25,9 @@ Next, the following command generates the first set of Spark application.::
 After the short question, you have the project directory (default: basic-spark)
 In the project directory, README.rst is found, which tells us how to execute sample application.
 
+You can read README.rst of the sample project from `this link <https://github.com/nttdata-oss/basic-spark-project.g8/blob/master/src/main/g8/README.rst>`_
+
+
 CHANGELOG
 =========
 
