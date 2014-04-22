@@ -16,7 +16,7 @@ Feature
 ========
 * Use ScalaTest
 * Include sbteclipse-plugin config in plugins.sbt
-* Use Hadoop 2.2 (CDH5b2)
+* Use Hadoop 2.3 (CDH5)
 * Sample souce code
 
   + SparkPi
@@ -176,12 +176,12 @@ Requirement
 -----------
 * sbt is installed
 * This project is located on ~/Sources/basic-spark.
-* Spark-0.9.0-incubating with compiled against CDH5b2.
+* Spark-0.9.0-incubating with compiled against CDH5.
   Here, we assume that you have cloned the Spark repository in ~/Sources/spark-0.9.0-incubating
   and the compiled JAR path is ~/Sources/spark-0.9.0-incubating/assembly/target/scala-2.10/spark-assembly-0.9.0-incubating-hadoop2.2.0-cdh5.0.0-beta-2.jar.
   The detail of compilling sources of Spark is available on `Spark public website <http://spark.apache.org/docs/latest/running-on-yarn.html>`_ .
-* The CDH5b2 YARN cluster is available from your client computer.
-* The CDH5b2 HDFS cluster is available from your client computer.
+* The CDH5 YARN cluster is available from your client computer.
+* The CDH5 HDFS cluster is available from your client computer.
   We assume that the url of HDFS is hdfs://hdfs-namenode:8020/
 * Hadoop configuration file is located on /etc/hadoop/conf.
 * You have the spark-env.sh in ~/Sources/spark-0.9.0-incubating/conf/spark-env.sh.
@@ -220,12 +220,12 @@ Requirement
 -----------
 * sbt is installed
 * This project is located on ~/Sources/basic-spark.
-* Spark-0.9.0-incubating with compiled against CDH5b2.
+* Spark-0.9.0-incubating with compiled against CDH5.
   Here, we assume that you have cloned the Spark repository in ~/Sources/spark-0.9.0-incubating
   and the compiled JAR path is ~/Sources/spark-0.9.0-incubating/assembly/target/scala-2.10/spark-assembly-0.9.0-incubating-hadoop2.2.0-cdh5.0.0-beta-2.jar.
   The detail of compilling sources of Spark is available on `Spark public website <http://spark.apache.org/docs/latest/running-on-yarn.html>`_ .
-* The CDH5b2 YARN cluster is available from your client computer.
-* The CDH5b2 HDFS cluster is available from your client computer.
+* The CDH5 YARN cluster is available from your client computer.
+* The CDH5 HDFS cluster is available from your client computer.
   We assume that the url of HDFS is hdfs://hdfs-namenode:8020/
 * Hadoop configuration file is located on /etc/hadoop/conf.
 * You have the spark-env.sh in ~/Sources/spark-0.9.0-incubating/conf/spark-env.sh.

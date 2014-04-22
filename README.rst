@@ -31,6 +31,15 @@ You can read README.rst of the sample project from `this link <https://github.co
 CHANGELOG
 =========
 
+0.1.1 (Change CDH5b2 to CDH5 GA.)
+------------------------
+* Scalatest 2.0 for testing
+* Sbt 0.12.4
+* Scala 2.10.3
+* Spark 0.9.0
+* Hadoop 2.3 (CDH5)
+* SparkPi
+
 0.1.0 (Initial release!)
 ------------------------
 * Scalatest 2.0 for testing
