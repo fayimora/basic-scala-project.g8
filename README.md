@@ -6,23 +6,15 @@ This is a [giter8](https://github.com/n8han/giter8) template for generating a ne
 * SBT configuration for `0.13.7`, `Scala 2.11.5`, and `ScalaTest 2.2.1` dependencies
 * project `name`, `organization` and `version` customizable as variables
 
-## CHANGELOG
+### usage:
+Follow g8 [installation instructions](http://github.com/n8han/giter8/#installation)  
+go to your favourite shell and enter  
 
-### 0.1.3
- * Scala 2.11.5
- * ScalaTest 2.2.1
- * SBT 0.13.7
- * ScalaCheck 1.12.1
+    g8 edombowsky/basic-scala-project.g8
+    cd [app-name]
+    sbt compile
 
-### 0.1.2
-* Scala 2.10.3
+generate project files for your favourite IDE
 
-### 0.1.1
-* Scalatest 1.9.2 for testing
-* Sbt 0.13.0
-
-### 0.1.0 (Initial release!)
-* Scalatest 1.9.1 for testing
-* Sbt 0.12.4
-* Scala 2.10.2
-
+    sbt eclipse
+    sbt gen-idea    
