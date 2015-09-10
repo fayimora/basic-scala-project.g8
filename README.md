@@ -3,7 +3,7 @@ This is a [giter8](https://github.com/n8han/giter8) template for generating a ne
 * `main` and `test` source directories
 * [ScalaTest](http://www.scalatest.org/)
 * [Scalacheck](http://www.scalacheck.org/)
-* SBT configuration for `0.13.7`, `Scala 2.11.5`, and `ScalaTest 2.2.1` dependencies
+* SBT configuration for `0.13.9`, `Scala 2.11.7`, and `ScalaTest 2.2.4` dependencies
 * project `name`, `organization` and `version` customizable as variables
 
 ### usage:
