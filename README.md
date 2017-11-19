@@ -4,10 +4,14 @@ This is a [giter8](https://github.com/n8han/giter8) template for generating a ne
 * [ScalaTest](http://www.scalatest.org/)
 * [Scalacheck](http://www.scalacheck.org/)
 * [SBT](http://www.scala-sbt.org/)
-* SBT configuration for `0.13.9`, `Scala 2.11.7`, and `ScalaTest 2.2.6` dependencies
 * project `name`, `organization` and `version` customizable as variables
 
 ## CHANGELOG
+
+### 0.1.5
+ * Scala 2.12.4
+ * ScalaTest 3.0.4
+ * SBT 1.0.3
 
 ### 0.1.4
  * Scala 2.11.7
