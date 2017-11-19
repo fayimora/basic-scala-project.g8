@@ -15,7 +15,7 @@ val scalazVersion = "7.1.0"
 jarName in assembly <<= (version) map { (version) => "$name;format="Camel"$-" + version + ".jar" }
 
 libraryDependencies ++= Seq(
-  "org.scalatest" %% "scalatest" % "2.2.6" % "test" withSources() withJavadoc(),
+  "org.scalatest" %% "scalatest" % "3.0.4" % "test" withSources() withJavadoc(),
   "org.scalacheck" %% "scalacheck" % "1.12.5" % "test" withSources() withJavadoc()
 
 //  "org.scalaz" %% "scalaz-core" % scalazVersion,
