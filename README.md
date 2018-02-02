@@ -1,5 +1,5 @@
-This is a [giter8](https://github.com/n8han/giter8) template for generating a new scala project. It comes bundled with:
-
+This is a [giter8](https://github.com/n8han/giter8) template for a new scala project.
+Including:
 * `main` and `test` source directories
 * [ScalaTest](http://www.scalatest.org/)
 * [Scalacheck](http://www.scalacheck.org/)
@@ -7,6 +7,11 @@ This is a [giter8](https://github.com/n8han/giter8) template for generating a ne
 * project `name`, `organization` and `version` customizable as variables
 
 ## CHANGELOG
+
+### 0.1.6
+ * Scala 2.12.4
+ * ScalaTest 3.0.4
+ * SBT 1.1.0
 
 ### 0.1.5
  * Scala 2.12.4
@@ -36,4 +41,3 @@ This is a [giter8](https://github.com/n8han/giter8) template for generating a ne
 * Scalatest 1.9.1 for testing
 * Sbt 0.12.4
 * Scala 2.10.2
-

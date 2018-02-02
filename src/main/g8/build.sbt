@@ -12,11 +12,11 @@ scalacOptions := Seq(
 
 val scalazVersion = "7.1.0"
 
-jarName in assembly <<= (version) map { (version) => "$name;format="Camel"$-" + version + ".jar" }
+assemblyJarName in assembly := s"$name;format="Camel"$-\${version.value}"
 
 libraryDependencies ++= Seq(
-  "org.scalatest" %% "scalatest" % "3.0.5" % "test" withSources() withJavadoc(),
-  "org.scalacheck" %% "scalacheck" % "1.12.5" % "test" withSources() withJavadoc()
+  "org.scalatest" %% "scalatest" % "3.0.4" % "test" withSources() withJavadoc(),
+  "org.scalacheck" %% "scalacheck" % "1.13.5" % "test" withSources() withJavadoc()
 
 //  "org.scalaz" %% "scalaz-core" % scalazVersion,
 //  "org.scalaz" %% "scalaz-effect" % scalazVersion,
